@@ -3018,11 +3018,11 @@ button, input, select {
   color: inherit;
 }
 
-/* PC/Desktop Environment: Disable link behavior & cursor */
+/* PC/Desktop Environment: Enable cursor & allow clicking to open application window */
 @media (min-width: 768px) {
   a.apply-contact-item {
-    cursor: default;
-    pointer-events: none;
+    cursor: pointer;
+    pointer-events: auto;
   }
   .footer-tel-link {
     color: inherit;
@@ -3823,4 +3823,143 @@ button, input, select {
     line-height: 1.7 !important;
   }
 }
+
+/* Right Consultation CTA Card & Button */
+.apply-consult-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+}
+
+.apply-consult-badge-row {
+  margin-bottom: 12px;
+}
+
+.apply-consult-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(91, 80, 246, 0.1);
+  color: #5b50f6;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+.apply-pulse-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #5b50f6;
+  border-radius: 50%;
+  animation: pulse-badge 1.5s infinite;
+}
+
+@keyframes pulse-badge {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(91, 80, 246, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(91, 80, 246, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(91, 80, 246, 0); }
+}
+
+.apply-consult-title {
+  font-size: 26px;
+  font-weight: 900;
+  color: #000000;
+  letter-spacing: -0.03em;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.apply-consult-title .purple-dot {
+  color: #5b50f6;
+  font-size: 14px;
+  margin-left: 6px;
+}
+
+.apply-consult-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #475569;
+  margin-bottom: 24px;
+}
+
+.apply-consult-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.apply-checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.4;
+}
+
+.apply-check-icon {
+  color: #5b50f6;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Naver Official Button styling */
+.apply-naver-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #03cf5d; /* Naver green */
+  color: #ffffff;
+  text-decoration: none;
+  padding: 16px 20px;
+  border-radius: 14px;
+  font-weight: 800;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(3, 207, 93, 0.2);
+}
+
+.apply-naver-btn:hover {
+  background: #02b34f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(3, 207, 93, 0.3);
+}
+
+.apply-naver-btn:active {
+  transform: translateY(0);
+}
+
+.apply-naver-btn-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.apply-naver-logo-tag {
+  background: #ffffff;
+  color: #03cf5d;
+  font-size: 11px;
+  font-weight: 900;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.apply-naver-btn-text {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.apply-naver-btn-icon {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
 
